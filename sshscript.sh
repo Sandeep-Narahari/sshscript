@@ -9,7 +9,7 @@ apt-get install -y openssh-server
 #echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 mkdir ~/.ssh
 nano authorized_keys
-echo ${my_pub_key} >> authorized_keys
+echo ${my_pub_key} >> ~/.ssh/authorized_keys
 #(echo ${my_pub_key}; echo ${my_pub_key}) | passwd root
 service ssh restart
 source $HOME/.bashrc
